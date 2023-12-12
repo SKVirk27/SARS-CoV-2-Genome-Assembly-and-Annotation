@@ -1,0 +1,40 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.15.1+htslib-1.15.1
+##bcftoolsCommand=mpileup -Ou -f GCF_009858895.2_ASM985889v3_genomic.fna sorted_aligned.bam
+##reference=file://GCF_009858895.2_ASM985889v3_genomic.fna
+##contig=<ID=NC_045512.2,length=29903>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Read Position Bias (closer to 0 is better)">
+##INFO=<ID=MQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality Bias (closer to 0 is better)">
+##INFO=<ID=BQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Base Quality Bias (closer to 0 is better)">
+##INFO=<ID=MQSBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality vs Strand Bias (closer to 0 is better)">
+##INFO=<ID=SCBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Soft-Clip Length Bias (closer to 0 is better)">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
+##bcftools_callVersion=1.15.1+htslib-1.15.1
+##bcftools_callCommand=call -mv -Ov -o SRR11528306_variants.vcf; Date=Mon Dec  4 21:40:34 2023
+##FILTER=<ID=LOWQUAL,Description="Set if true: %QUAL<20 || DP<10">
+##bcftools_filterVersion=1.15.1+htslib-1.15.1
+##bcftools_filterCommand=filter -s LOWQUAL '-e%QUAL<20 || DP<10' SRR11528306_variants.vcf; Date=Mon Dec  4 21:40:58 2023
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	sorted_aligned.bam
+NC_045512.2	252	.	G	C	4.38466	LOWQUAL	DP=1;SGB=-0.379885;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,1,0;MQ=42	GT:PL	1/1:32,3,0
+NC_045512.2	884	.	C	T	228.418	PASS	DP=246;VDB=0.0844183;SGB=-0.693147;RPBZ=-1.20737;MQBZ=7.24027;MQSBZ=-0.890792;BQBZ=4.20753;SCBZ=0;FS=0;MQ0F=0;AC=2;AN=2;DP4=1,1,188,50;MQ=41	GT:PL	1/1:255,255,0
+NC_045512.2	1397	.	G	A	225.417	PASS	DP=246;VDB=0.0118218;SGB=-0.693147;MQSBZ=1.25701;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,157,82;MQ=41	GT:PL	1/1:255,255,0
+NC_045512.2	3040	.	C	T	225.422	PASS	DP=250;VDB=0.409145;SGB=-0.693147;MQSBZ=0.896258;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,175,70;MQ=41	GT:PL	1/1:255,255,0
+NC_045512.2	8653	.	G	T	228.409	PASS	DP=249;VDB=0.844037;SGB=-0.693147;RPBZ=-1.33957;MQBZ=-0.157774;MQSBZ=-0.257197;BQBZ=-0.300292;SCBZ=0;FS=0;MQ0F=0;AC=2;AN=2;DP4=1,0,174,72;MQ=41	GT:PL	1/1:255,255,0
+NC_045512.2	11083	.	G	T	228.419	PASS	DP=198;VDB=9.67049e-11;SGB=-0.693147;RPBZ=1.53835;MQBZ=3.79851;MQSBZ=0.665719;BQBZ=1.6347;SCBZ=0;FS=0;MQ0F=0;AC=2;AN=2;DP4=1,0,135,40;MQ=41	GT:PL	1/1:255,255,0
+NC_045512.2	25413	.	C	T	222.053	PASS	DP=239;VDB=0.868674;SGB=-0.693147;RPBZ=-0.0167563;MQBZ=0.670745;MQSBZ=-0.110495;BQBZ=-1.523;SCBZ=0;FS=0;MQ0F=0;AC=1;AN=2;DP4=118,33,63,23;MQ=40	GT:PL	0/1:255,0,255
+NC_045512.2	28688	.	T	C	225.422	PASS	DP=247;VDB=0.999982;SGB=-0.693147;MQSBZ=-1.27225;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,199,45;MQ=41	GT:PL	1/1:255,255,0
